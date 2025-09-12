@@ -21,6 +21,10 @@ header {
   margin: 0;
 }
 
+.logo img {
+    border-radius: 50%;
+}
+
 nav ul {
   list-style: none;
   display: flex;

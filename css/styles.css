@@ -162,6 +162,43 @@ main {
   color: #6a0dad; 
 }
 
+.about {
+  background-color: #f9f5ff; 
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.about h2 {
+  font-family: 'Playfair Display', serif; 
+  font-size: 2.2rem;
+  color: #6a0dad; 
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-family: 'Poppins', sans-serif; 
+  font-size: 1.1rem;
+  color: #4b0082;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 footer {
   text-align: center;
   padding: 1rem;

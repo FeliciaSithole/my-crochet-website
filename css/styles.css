@@ -212,6 +212,26 @@ main {
   flex: 1;
 }
 
+.success-message {
+    display: none; 
+    color: #6a0dad; 
+    background-color: #f3e8ff; 
+    border: 1px solid #d1b3ff; 
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 15px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
 footer {
   text-align: center;
   padding: 1rem;

@@ -298,33 +298,54 @@ main {
   box-shadow: 0px 4px 10 rgba(103, 13, 173, 0.2);
 }
 
+.about {
+    background-color: #f9f5ff;   /* soft pastel background */
+    padding: 2.5rem 1.5rem;      /* comfortable padding */
+    border-radius: 15px;          /* rounded corners */
+    text-align: center;           /* center the text and image */
+    max-width: 900px;             /* constrain width for readability */
+    margin: 2rem auto;            /* center the section horizontally */
+    box-shadow: 0 6px 20px rgba(103, 13, 173, 0.15);  /* subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about:hover {
+    transform: translateY(-5px);  /* slight lift effect */
+    box-shadow: 0 10px 25px rgba(103, 13, 173, 0.25);
+}
+
 .about h2 {
-  font-family: 'Playfair Display', serif; 
-  font-size: 2.2rem;
-  color: #6a0dad; 
-  margin-bottom: 1rem;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.4rem;
+    color: #6a0dad; 
+    margin-bottom: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(109, 40, 217, 0.1);
 }
 
 .about p {
-  font-family: 'Poppins', sans-serif; 
-  font-size: 1.1rem;
-  color: #4b0082;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: #4b0082;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
 }
 
 .about-img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%; 
-  border: 4px solid #6a0dad; 
-  margin-bottom: 1rem;
-  box-shadow: 0px 4px 12px rgba(106, 13, 173, 0.3);
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%; 
+    border: 4px solid #6a0dad; 
+    margin-bottom: 1.5rem;
+    box-shadow: 0px 4px 15px rgba(106, 13, 173, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.about-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(106, 13, 173, 0.4);
+}
+
 
 /* img {
   max-width: 100%;

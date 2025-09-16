@@ -87,25 +87,45 @@ main {
 }
 
 .hero {
-  text-align: center;
-  padding: 2rem;
-  background-color: #e9d5ff; 
-  border-radius: 10px;
-  margin-bottom: 2rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: #e9d5ff;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(128, 90, 213, 0.2);
+}
+
+.hero h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #6a0dad;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 4px rgba(147, 51, 234, 0.2);
+}
+
+.hero p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #4b0082;
+    margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
 .hero .btn {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #9b59b6; 
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #9b59b6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .hero .btn:hover {
-  background-color: #d291ff; 
+    background-color: #d291ff;
+    transform: scale(1.05);
 }
 
 .features, .about, .gallery, .contact {
@@ -122,9 +142,10 @@ main {
 }
 
 .product {
-  float: left;
-  width: 100%;
-  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .product-grid::after {
@@ -135,9 +156,10 @@ main {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 2rem;
-  align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* auto-fit for responsiveness */
+    gap: 20px; /* space between items */
+    justify-items: center; /* center items horizontally */
+    align-items: start;
 }
 
 .product img {
@@ -156,11 +178,47 @@ main {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
-/* .product h3 {
-  text-align: center;
-  margin-top: 0.5rem;
-  color: #6a0dad; 
-} */
+.product h3 {
+    margin-top: 0.5rem;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
+    color: #6a0dad;
+}
+
+.features {
+    text-align: center;           /* center the heading and list horizontally */
+    max-width: 900px;             /* optional: limit width for better appearance */
+    margin: 2rem auto;            /* center the section horizontally with vertical spacing */
+    padding: 1rem;
+}
+
+.features h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #6a0dad;
+    margin-bottom: 1.5rem;
+}
+
+.features ul {
+    display: flex;             /* make items horizontal */
+    justify-content: center;   /* center the items */
+    flex-wrap: wrap;           /* wrap on small screens */
+    gap: 1rem;                 /* space between cards */
+    padding: 0;
+    list-style: none;
+}
+
+.features ul li {
+    background-color: #e9d5ff;  /* card background */
+    color: #4b0082;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(106, 13, 173, 0.2);
+    flex: 1 1 200px;           /* responsive width */
+    text-align: center;
+}
 
 .featured-product-grid {
     display: flex;
@@ -406,7 +464,51 @@ footer {
   #menu-toggle {
     display: block;
   }
+
+  .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
 }
 
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* 1 column on phones */
+    gap: 15px; /* increase spacing between items */
+  }
+
+  .product img {
+        height: auto; /* auto height to maintain aspect ratio */
+        max-width: 90%; /* leave some space on the sides */
+    }
+
+  .featured-product-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* add spacing between featured products */
+  }
+
+  .featured-product {
+    max-width: 90%; /* smaller width so it doesn't touch edges */
+  }
+
+  .product img, .featured-product img {
+    height: auto; /* maintain aspect ratio on smaller screens */
+    max-width: 100%;
+  }
+
+   main {
+    padding: 1rem; /* reduce padding slightly for mobile */
+  }
+
+  .featured-product h3 {
+    font-size: 1.2rem; /* slightly smaller font on phones */
+  }
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
 
 

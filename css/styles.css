@@ -489,6 +489,29 @@ footer {
   cursor: pointer;
 } */
 
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Give each link a different color */
+nav ul li:nth-child(1) a { color: #ede9fe; }  
+nav ul li:nth-child(2) a { color: #ede9fe; }   
+nav ul li:nth-child(3) a { color: #ede9fe; }  
+nav ul li:nth-child(4) a { color: #ede9fe; }  
+
+/* Optional hover effect */
+nav ul li a:hover {
+    color: #9b59b6;
+    background-color: #6a0dad;
+}
+
+
 /* HAMBURGER BUTTON */
 #menu-toggle {
   display: none; /* hidden on desktop */
@@ -513,6 +536,7 @@ footer {
   border-radius: 2px;
   transition: all 0.4s ease;
 }
+
 
 /* Hamburger transforms into X when active */
 #menu-toggle.active .bar:nth-child(1) {

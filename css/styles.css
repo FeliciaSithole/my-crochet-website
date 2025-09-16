@@ -372,14 +372,80 @@ main {
     box-shadow: 0 8px 20px rgba(106, 13, 173, 0.4);
 }
 
+.contact {
+    background-color: #f9f0ff;        /* soft pastel background */
+    padding: 3rem 2rem;               /* generous spacing */
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(106, 13, 173, 0.1);
+}
 
-/* img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-} */
+.contact h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    color: #6a0dad;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(109, 40, 217, 0.1);
+}
 
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
 
+.contact label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #4b0082;
+    text-align: left;
+}
+
+.contact input,
+.contact textarea {
+    padding: 0.8rem 1rem;
+    border: 2px solid #d9b8ff;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #6a0dad;
+    box-shadow: 0 0 10px rgba(106, 13, 173, 0.2);
+}
+
+.contact button {
+    background-color: #6a0dad;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact button:hover {
+    background-color: #9b59b6;
+    transform: translateY(-2px);
+}
+
+#success-message {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: green;
+    margin-top: 1rem;
+    transition: opacity 0.5s ease;
+}
 
 html, body {
   height: 100%;

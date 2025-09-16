@@ -281,13 +281,91 @@ footer {
   color: #6a0dad; 
 }
 
-#menu-toggle {
+/* #menu-toggle {
   display: none;
   font-size: 2rem;
   background: none;
   border: none;
   color: #fff;
   cursor: pointer;
+} */
+
+/* HAMBURGER BUTTON */
+#menu-toggle {
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45px;          /* bigger for easier tapping */
+  height: 35px;
+  background-color: rgba(0, 0, 0, 0.25); /* semi-transparent dark background */
+  border: none;
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+  z-index: 1100; /* above nav */
+  align-items: center;
+}
+
+#menu-toggle .bar {
+  display: block;
+  height: 4px;          /* thicker bars */
+  width: 100%;
+  background-color: #ffccff; /* bright white */
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger transforms into X when active */
+#menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+#menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+#menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+#menu-toggle:hover .bar {
+  background-color: #ffccff; /* or any accent color from your theme */
+}
+
+
+/* MOBILE MENU STYLING */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    background-color: #6a0dad;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    border-radius: 10px;
+    padding: 0 1rem;
+
+    /* Hidden by default */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+  }
+
+  nav ul.show {
+    max-height: 500px; /* enough for all links */
+    opacity: 1;
+  }
+
+  nav ul li {
+    margin: 1rem 0;
+  }
+
+  nav ul li a {
+    color: #ffccff;
+  }
 }
 
 
@@ -304,7 +382,6 @@ footer {
 
 @media (max-width: 768px) {
   nav ul {
-    display: none;
     flex-direction: column;
     background-color: #6a0dad;
     position: absolute;
@@ -312,16 +389,24 @@ footer {
     right: 20px;
     width: 200px;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 0 1rem;
+    
+    /* Hidden by default */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
   }
 
   nav ul.show {
-    display: flex;
+    max-height: 500px; /* enough to show all links */
+    opacity: 1;
   }
 
   #menu-toggle {
     display: block;
   }
 }
+
 
 

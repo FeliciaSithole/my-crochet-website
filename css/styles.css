@@ -128,6 +128,34 @@ main {
     transform: scale(1.05);
 }
 
+.btn {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;       /* size of the button */
+    color: #fff;                  /* text color */
+    background: linear-gradient(135deg, #9b59b6, #d291ff);  /* gradient background */
+    border: none;
+    border-radius: 10px;          /* rounded corners */
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(155, 89, 182, 0.3);  /* soft shadow */
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #d291ff, #9b59b6); /* gradient hover */
+    transform: translateY(-3px) scale(1.05);               /* small lift effect */
+    box-shadow: 0 6px 16px rgba(155, 89, 182, 0.4);
+}
+
+.btn:active {
+    transform: translateY(0) scale(0.98);  /* pressed effect */
+    box-shadow: 0 3px 8px rgba(155, 89, 182, 0.3);
+}
+
+
 .features, .about, .gallery, .contact {
   margin-bottom: 2rem;
 }
